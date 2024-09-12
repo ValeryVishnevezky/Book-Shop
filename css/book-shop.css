@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.3em;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+p {
+  margin: 10px;
+}
+
+img {
+  margin-top: 10px;
+  height: 50px;
+}
+
+header,
+footer {
+  display: flex;
+  position: relative;
+  padding: 0 10px;
+
+  color: white;
+  background-color: #88acb7;
+}
+
+main {
+  min-height: 90vh;
+}
+
+table {
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  font-size: 1.2em;
+  color: #4e656a;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px #7a898d solid;
+}
+
+.table-titles {
+  margin: 10px;
+  font-weight: bold;
+  color: white;
+  background-color: #7ea0aa;
+}
+
+.title,
+.prise,
+.actions {
+  padding: 10px;
+}
+
+.book1,
+.book3 {
+  background-color: #fbfeff;
+}
+
+.book2 {
+  background-color: #c8e7f0;
+}
+
+td{
+    height: 35px;
+}
+
+.book-title {
+  padding: 0 10px;
+}
+
+.book-prise {
+  text-align: center;
+}
+
+.book-actions {
+  text-align: center;
+}
+
+button {
+  margin: 5px 20px;
+  width: 90px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9em;
+
+}
+
+.read {
+  background-color: #4ec1e3;
+}
+
+.update {
+  background-color: #e9c638;
+}
+
+.delete {
+  background-color: #e29248;
+}
