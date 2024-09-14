@@ -26,10 +26,16 @@ function renderBooks() {
     <td class="book-price">${book.price}</td>
     <td class="book-actions">
       <button class="read">Read</button>
-      <button class="update">Update</button>
+      <button class="update" onClick = "onUpdateBook('${book.id}')">Update</button>
       <button class= "delete" onClick = "removeBook('${book.id}')">Delete</button>
     </td>
   </tr>`
     })
     elTbody.innerHTML = rowsTbody
+}
+
+function onUpdateBook(bookId){
+    const userPrice = prompt('Enter your price:')
+    updatePrice(userPrice, bookId)
+    renderBooks()
 }

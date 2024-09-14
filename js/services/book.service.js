@@ -34,6 +34,7 @@ const gBooks = [
         imgUrl: 'lori-ipsi.jpg'
     }
 ]
+console.log(gBooks)
 
 function getBooks() {
 return gBooks
@@ -44,4 +45,12 @@ function removeBook(bookId){
     const idx = gBooks.findIndex(book => book.id === bookId)
     gBooks.splice(idx, 1)
     renderBooks()
+}
+
+function updatePrice(newPrice, bookId){
+    gBooks.forEach(book => {
+        if (book.id === bookId) {
+            return book.price = newPrice
+        }
+    })
 }
