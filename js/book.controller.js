@@ -2,6 +2,7 @@
 
 function onInit() {
     renderBooks()
+    onUpdateStatistic()
 }
 
 function renderBooks() {
@@ -41,6 +42,7 @@ function renderBooks() {
 
 function onRemoveBook(bookId) {
     removeBook(bookId)
+    onUpdateStatistic()
     renderBooks()
 
     const elModalActions = document.querySelector('.book-action')
@@ -60,6 +62,7 @@ function onRemoveBook(bookId) {
 function onUpdateBook(bookId) {
     const userPrice = prompt('Enter your price:')
     updatePrice(userPrice, bookId)
+    onUpdateStatistic()
     renderBooks()
 
     const elModalActions = document.querySelector('.book-action')
@@ -77,9 +80,16 @@ function onUpdateBook(bookId) {
 }
 
 function onAddBook() {
-    const userBookName = prompt('Enter your book title:')
-    const userBookPrice = prompt('Enter your book price:')
+    var userBookName = prompt('Enter your book title:')
+    var userBookPrice = prompt('Enter your book price:')
+
+    if (!userBookName && !userBookPrice) {
+        alert('You have not entered a value')
+        var userBookName = prompt('Enter your book title:')
+        var userBookPrice = prompt('Enter your book price:')
+    }
     addUserBook(userBookName, userBookPrice)
+    onUpdateStatistic()
     renderBooks()
 
     const elModalActions = document.querySelector('.book-action')
@@ -115,4 +125,13 @@ function onClearFilter() {
     document.querySelector('.book-filter').value = ''
     filterBooks('')
     renderBooks()
+}
+
+function onUpdateStatistic() {
+    const statistic = updateStatistic()
+
+    document.querySelector('.expensive-books').textContent = `Expensive books: ${statistic.expensiveBooksCount}`
+    document.querySelector('.average-books').textContent = `Average books: ${statistic.averageBooksCount}`
+    document.querySelector('.cheap-books').textContent = `Cheap books: ${statistic.cheapBooksCount}`
+
 }
