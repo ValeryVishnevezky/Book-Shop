@@ -1,6 +1,7 @@
 'use strict'
 
 const BOOKS_KEY = 'books'
+var gFilteredBooks = null
 
 function initBooks() {
     var books = loadFromStorage(BOOKS_KEY)
@@ -47,7 +48,7 @@ const gBooks = initBooks()
 console.log(gBooks)
 
 function getBooks() {
-    return gBooks
+    return gFilteredBooks || gBooks
 }
 
 
@@ -79,6 +80,10 @@ function addUserBook(title, price) {
 
 function getBookById(bookId) {
     return gBooks.find(book => book.id === bookId)
+}
+
+function filterBooks(userBookTitle){
+    gFilteredBooks = gBooks.filter(book => book.title.toLowerCase().includes(userBookTitle))
 }
 
 function _saveBooks() {
