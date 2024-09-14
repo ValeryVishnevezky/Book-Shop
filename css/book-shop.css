@@ -14,7 +14,8 @@ footer {
   padding: 0 10px;
 
   color: white;
-  background-color: #88acb7;
+  background-color: #1e84a6;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -56,7 +57,7 @@ td {
   margin: 10px;
   font-weight: bold;
   color: white;
-  background-color: #7ea0aa;
+  background-color: #1e84a6;
 }
 
 .price,
@@ -76,28 +77,104 @@ td {
 
 .book-title {
   padding: 0 10px;
+  box-sizing: border-box;
 }
 
-button {
-  margin: 5px 20px;
+.button-box {
+  margin: auto;
+  width: 90%;
+}
+
+.book-adding-button {
+  float: right;
+  margin-bottom: 20px;
+
   width: 120px;
   height: 35px;
   border: none;
   border-radius: 8px;
   color: #ffffff;
-  font-weight: bold;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #025b79;
 }
 
-.read {
-  background-color: #4ec1e3;
+.button-read {
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 5px 20px;
+  font-weight: bold;
+  background-color: #50c4eb;
 }
 
-.update {
-  background-color: #e9c638;
+.button-update {
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 5px 20px;
+  font-weight: bold;
+  background-color: #ffab52;
 }
 
-.delete {
-  background-color: #e29248;
+.button-delete {
+  width: 120px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 5px 20px;
+  font-weight: bold;
+  background-color: #ff8300;
+}
+
+.book-details-button {
+  cursor: pointer;
+  font-size: 1em;
+  float: right;
+  width: 30px;
+  height: 30px;
+  color: gray;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.book-details {
+  width: 70vw;
+  height: 70vh;
+  padding: 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.8em;
+  color: white;
+  background-color: rgb(163, 192, 202);
+}
+
+.close-modal-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  right: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 1em;
+  color: white;
+  background-color: rgba(91, 131, 145, 0.658);
 }
