@@ -27,7 +27,7 @@ function renderBooks() {
     <td class="book-actions">
       <button class="read">Read</button>
       <button class="update">Update</button>
-      <button class="delete">Delete</button>
+      <button class= "delete" onClick = "removeBook('${book.id}')">Delete</button>
     </td>
   </tr>`
     })
