@@ -9,8 +9,14 @@
   </head>
   <body onload="onInit()">
     <header>
+      <div class="left-container">
       <h1>Book Shop</h1>
       <img src="img/books.png">
+    </div>
+    <div class="right-container">
+      <input type="text" class="book-filter" placeholder="Search by title" oninput="onFilterBooks()">
+      <button class="clear-book-filter" onclick="onClearFilter()">Clear</button>
+    </div>
     </header>
     <main>
       <div class="button-box">
@@ -22,12 +28,18 @@
     <dialog class="book-details">
       <form method="dialog">
         <button class="close-modal-button">x</button>
-          <pre></pre>
+          <pre1></pre1>
+      </form>
+    </dialog>
+
+    <dialog class="book-action hide">
+      <form method="dialog">
+          <pre2></pre2>
       </form>
     </dialog>
 
     <footer>
-      <p>@ Valery's Book Shop</p>
+      <p>@Valery's Book Shop</p>
     </footer>
 
     <script src="js/services/util.service.js"></script>
