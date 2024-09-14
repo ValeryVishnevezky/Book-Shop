@@ -9,11 +9,11 @@
   </head>
   <body onload="onInit()">
     <header>
-      <div class="left-container">
+      <div class="left-header-container">
       <h1>Book Shop</h1>
       <img src="img/books.png">
     </div>
-    <div class="right-container">
+    <div class="right-header-container">
       <input type="text" class="book-filter" placeholder="Search by title" oninput="onFilterBooks()">
       <button class="clear-book-filter" onclick="onClearFilter()">Clear</button>
     </div>
@@ -39,7 +39,14 @@
     </dialog>
 
     <footer>
+      <div class="left-footer-container">
       <p>@Valery's Book Shop</p>
+    </div>
+    <div class="right-footer-container">
+      <p class="expensive-books"></p>
+      <p class="average-books"></p>
+      <p class="cheap-books"></p>
+    </div>
     </footer>
 
     <script src="js/services/util.service.js"></script>
