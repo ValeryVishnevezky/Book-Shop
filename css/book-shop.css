@@ -12,14 +12,25 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
   padding: 0 10px;
   color: white;
   background-color: #1e84a6;
   box-sizing: border-box;
 }
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+}
 
-.left-container, .right-container {
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.left-header-container, .right-header-container {
   display: flex;
   align-items: center;
 }
@@ -28,10 +39,6 @@ h1 {
   font-size: 2.3em;
   margin-top: 15px;
   margin-bottom: 15px;
-}
-
-p {
-  margin: 10px;
 }
 
 img {
@@ -55,20 +62,31 @@ img {
   background-color: #025b79;
 }
 
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.left-footer-container, .right-footer-container{
+  display: flex;
+  align-items: center;
+}
+
 main {
   margin: 20px;
+  margin-top: 120px;
+  margin-bottom: 100px;
   min-height: fit-content;
 }
 
 .button-box {
   margin: auto;
   width: 90%;
+  text-align: right;
+  margin-bottom: 20px;
 }
 
 .book-adding-button {
-  float: right;
-  margin-bottom: 20px;
-
   width: 120px;
   height: 35px;
   border: none;
