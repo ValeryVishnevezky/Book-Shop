@@ -7,8 +7,18 @@ body {
   margin: 0 auto;
 }
 
+header,
+footer {
+  display: flex;
+  position: relative;
+  padding: 0 10px;
+
+  color: white;
+  background-color: #88acb7;
+}
+
 h1 {
-    font-size: 2.3em;
+  font-size: 2.3em;
   margin-top: 15px;
   margin-bottom: 8px;
 }
@@ -22,23 +32,15 @@ img {
   height: 50px;
 }
 
-header,
-footer {
-  display: flex;
-  position: relative;
-  padding: 0 10px;
-
-  color: white;
-  background-color: #88acb7;
-}
-
 main {
-  min-height: 90vh;
+  margin: 20px;
+  min-height: fit-content;
 }
 
 table {
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 90%;
   font-size: 1.2em;
   color: #4e656a;
@@ -47,6 +49,7 @@ table {
 
 td {
   border: 1px #7a898d solid;
+  height: 55px;
 }
 
 .table-titles {
@@ -56,40 +59,28 @@ td {
   background-color: #7ea0aa;
 }
 
-.title,
-.prise,
+.price,
 .actions {
-  padding: 10px;
+  padding: 0 15px;
+  text-align: center;
 }
 
-.book1,
-.book3 {
-  background-color: #fbfeff;
+.title {
+  padding: 0 15px;
 }
 
-.book2 {
-  background-color: #c8e7f0;
-}
-
-td{
-    height: 35px;
+.book-price,
+.book-actions {
+  text-align: center;
 }
 
 .book-title {
   padding: 0 10px;
 }
 
-.book-prise {
-  text-align: center;
-}
-
-.book-actions {
-  text-align: center;
-}
-
 button {
   margin: 5px 20px;
-  width: 90px;
+  width: 120px;
   height: 35px;
   border: none;
   border-radius: 8px;
@@ -97,7 +88,6 @@ button {
   font-weight: bold;
   cursor: pointer;
   font-size: 0.9em;
-
 }
 
 .read {
